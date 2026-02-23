@@ -6,6 +6,30 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+# Mi Proyecto Laravel 12 🚀
+
+Este es un proyecto de aprendizaje de Laravel 12 desarrollado en un entorno profesional utilizando **Docker** y **Laravel Sail**.
+
+## 🛠️ Requisitos previos
+
+Para ejecutar este proyecto de la forma más sencilla, se recomienda tener instalado:
+* [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+* WSL2 (si estás en Windows)
+
+## 🚀 Instalación y Puesta en Marcha
+
+Si acabas de clonar este repositorio, sigue estos pasos para levantarlo en tu máquina local:
+
+### 1. Instalar dependencias
+Como la carpeta `vendor` no se sube al repositorio, debemos instalarla. Si no tienes PHP local, puedes usar un contenedor temporal de Docker para hacerlo:
+
+```bash
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php84-composer:latest \
+    composer install --ignore-platform-reqs
 
 ## About Laravel
 
